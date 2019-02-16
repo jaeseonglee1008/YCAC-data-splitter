@@ -14,8 +14,8 @@ def splitter(dataframe, title):
 def csv_generator(df_X, d):
 	directory = d
 	cwd = os.getcwd()
-	title = df_X["file"].iloc[0]
-	composer = df_X["Composer"].iloc[0]
+	title = str(df_X["file"].iloc[0])
+	composer = str(df_X["Composer"].iloc[0])
 	filename = title + ' by ' + composer + '.csv'
 	dir_path = os.path.join(cwd,directory)
 	new_path = os.path.join(dir_path,composer)
